@@ -1,0 +1,31 @@
+.timestamps {
+    width: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.timestamps .counter {
+    width: 100%;
+    text-align: left;
+}
+
+.timestamps .button-prev,
+.timestamps .button-next {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.timestamps .button-prev span,
+.timestamps .button-next span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}

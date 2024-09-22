@@ -1,0 +1,9 @@
+.circle {
+    position: relative;
+    width: 500px; /* Диаметр круга */
+    height: 500px; /* Диаметр круга */
+    border-radius: 50%; /* Делаем круг */
+    border: 1px solid rgba(66, 86, 122, 0.3); /* Обводим круг черной линией */
+    margin: 50px auto; /* Центрируем круг по горизонтали */
+    z-index: 2;
+}
