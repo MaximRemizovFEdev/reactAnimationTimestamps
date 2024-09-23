@@ -6,6 +6,7 @@ import { useState } from 'preact/hooks';
 import { Slider } from './components/Slider';
 import { TimestampButtons } from './components/TimestampButtons';
 import { useEffect } from 'preact/hooks';
+import { Icon } from './components/Icon';
 
 const jsonData = {
 	timestamps: [
@@ -206,6 +207,7 @@ export function App() {
 	return (
 		<main>
 			<div className={"component__wrapper"}>
+				<Icon />
 				<div class={"line"}>
 					<LinerWrapper>
 						<Circle dots={data.length} active={current}/>
