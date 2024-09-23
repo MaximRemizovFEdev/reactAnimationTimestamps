@@ -25,7 +25,7 @@ export const Circle = (props: ICircle) => {
 
     const circleRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(props.active);
-    const handlePointClick = (index, pointRef, cb?: (index) => void) => {
+    const handlePointClick = (index, cb?: (index) => void) => {
         setActiveIndex(index);
         const angle = (index * (360 / points)); // Поворачиваем круг, чтобы активная точка была в верхнем правом секторе
         gsap.to(circleRef.current, {
@@ -33,7 +33,7 @@ export const Circle = (props: ICircle) => {
             duration: 0.5,
             transformOrigin: '50% 50%',
         });
-        gsap.to(pointRef.current, {
+        gsap.to(".point", {
             rotation: -angle,
             duration: 0.1,
             transformOrigin: '50% 50%',
@@ -42,13 +42,13 @@ export const Circle = (props: ICircle) => {
     };
 
     useEffect(() => {
-        handlePointClick(props.active, { current: ".point" })
+        handlePointClick(props.active)
     }, [props.active]);
 
     return (
         <div className={circle} ref={circleRef}>
             {pointsStyle.map((style, idx) => (
-                <Point key={idx} style={style} num={idx + 1} onClick={(pointRef) => handlePointClick(idx, pointRef, props.setCurrent)} isActive={idx === activeIndex} />
+                <Point key={idx} style={style} num={idx + 1} onClick={() => handlePointClick(idx, props.setCurrent)} isActive={idx === activeIndex} />
             ))}
         </div>
     );
