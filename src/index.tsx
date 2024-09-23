@@ -210,7 +210,7 @@ export function App() {
 				<Icon />
 				<div class={"line"}>
 					<LinerWrapper>
-						<Circle dots={data.length} active={current}/>
+						<Circle dots={data.length} active={current} setCurrent={setCurrent}/>
 						<Label yearStart={prev} yearEnd={next} />
 					</LinerWrapper>
 				</div>
