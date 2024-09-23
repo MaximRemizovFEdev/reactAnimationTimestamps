@@ -16,6 +16,7 @@ export const Slider = ({ data }) => {
 
   return (
     <div style={styles.container}>
+      <div className="swiper-button-prev" style={styles.buttonSlide}></div>
       <Swiper
         navigation={{
           nextEl: '.swiper-button-next',
@@ -28,11 +29,10 @@ export const Slider = ({ data }) => {
         modules={[Navigation]}
       >
         {/* Добавляем кнопки переключения */}
-        <div className="swiper-button-prev" style={styles.buttonSlide}></div>
-        <div className="swiper-button-next" style={styles.buttonSlide}></div>
 
         {getContent()}
       </Swiper>
+      <div className="swiper-button-next" style={styles.buttonSlide}></div>
     </div>
   )
 }
@@ -44,6 +44,10 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
+    paddingLeft: '70px',
+    paddingRight: '70px',
+    boxSizing: 'border-box',
+    position: "relative"
   },
   swiper: {
     width: '100%',
@@ -52,7 +56,6 @@ const styles = {
   slide: {
     width: '200px',
     height: '100px',
-    // background: '#f0f0f0',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -61,11 +64,16 @@ const styles = {
     textAlign: 'left',
   },
   title: {
-    color: 'blue',
+    color: '#3877EE',
     margin: 0,
+    textAlign: 'left',
+    width: "100%",
+    fontSize: "25px"
   },
   text: {
     margin: 0,
+    textAlign: 'left',
+    width: "100%"
   },
   buttonSlide: {
     width: '30px',
