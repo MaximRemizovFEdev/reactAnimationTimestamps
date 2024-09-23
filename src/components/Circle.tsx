@@ -4,9 +4,9 @@ import { gsap } from 'gsap';
 import st from "./circle.module.css";
 
 interface ICircle {
-    dots: number,
-    active: number,
-    setCurrent: () => void
+    dots: number;
+    active: number;
+    setCurrent: (index: number) => void;
 }
 
 export const Circle = (props: ICircle) => {
