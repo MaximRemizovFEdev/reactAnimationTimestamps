@@ -210,12 +210,12 @@ export function App() {
 				<Icon />
 				<div class={"line"}>
 					<LinerWrapper>
-						<Circle dots={data.length} active={current} setCurrent={setCurrent}/>
+						<Circle dots={data.length} active={current} setCurrent={setCurrent} />
 						<Label yearStart={prev} yearEnd={next} />
 					</LinerWrapper>
 				</div>
 				<TimestampButtons setPrev={setDataHandler} setNext={setDataHandler} current={current} setCurrent={setCurrent} total={data.length} />
-				<Slider data={slides}/>
+				<Slider data={slides} />
 			</div>
 		</main>
 	);

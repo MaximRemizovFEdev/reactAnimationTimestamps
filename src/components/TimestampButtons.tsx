@@ -1,6 +1,6 @@
 import './TimestampButtons.css';
 
-export const TimestampButtons = ({setPrev, setNext, current, setCurrent, total}) => {
+export const TimestampButtons = ({ setPrev, setNext, current, setCurrent, total }) => {
     const handlerPrev = () => {
         if (current === 0) {
             setPrev();

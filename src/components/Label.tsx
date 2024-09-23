@@ -11,22 +11,22 @@ export const Label = (props) => {
 		// const duration = Math.abs(targetNumber - number); // Определяем длительность анимации
 
 		gsap.to({ value: yearStart }, {
-		value: props.yearStart,
-		duration: 0.3,
-		roundProps: "value", // Округляем до целого
-		onUpdate: function() {
-            setStart(Math.round(this.targets()[0].value)); // Обновляем состояние, округляем
-          },
+			value: props.yearStart,
+			duration: 0.3,
+			roundProps: "value", // Округляем до целого
+			onUpdate: function () {
+				setStart(Math.round(this.targets()[0].value)); // Обновляем состояние, округляем
+			},
 		});
 
 		gsap.to({ value: yearEnd }, {
 			value: props.yearEnd,
 			duration: 0.3,
 			roundProps: "value", // Округляем до целого
-			onUpdate: function() {
+			onUpdate: function () {
 				setEnd(Math.round(this.targets()[0].value)); // Обновляем состояние, округляем
-			  },
-			});
+			},
+		});
 	}, [props.yearStart, props.yearEnd]);
 	return (<div className={"wrapper__years"}>
 
